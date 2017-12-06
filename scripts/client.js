@@ -21,6 +21,12 @@ $( document ).ready( ()=>{
             } // end no empties
         } // end add car
     ) // end addCarButton on click
+    $( '#output' ).on( 'click', '.removeCarButton', function( event ){
+        // remove car with this index from garage
+        garage.splice( $( this ).data( 'index' ), 1 );
+        // update view
+        showCars();
+    }); // end remove car button click
 }); //end doc ready
 
 var showCars = () =>{
@@ -30,7 +36,7 @@ var showCars = () =>{
     garageList.empty();
     // loop through all cars and append to list on DOM
     for( let i=0; i< garage.length; i++ ){
-        let outputString = '<li>' + garage[ i ].year + ' ' + garage[ i ].make + ' ' + garage[ i ].model + '</li>';
+        let outputString = '<li>' + garage[ i ].year + ' ' + garage[ i ].make + ' ' + garage[ i ].model + ' <button class="removeCarButton btn btn-danger" data-index=' + i + '>remove</button></li>';
         garageList.append( outputString );
     } // end for 
 } // end showCars
