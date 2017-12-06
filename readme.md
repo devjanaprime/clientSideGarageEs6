@@ -34,7 +34,7 @@ There needs to be a space on the page where all the cars in the garage are displ
 
 Empty the input fields after a car has been added.
 
-Add a working remove button that for each car
+Add a working remove button for each car
 
 ![remove](images/remove_0.png)
 
