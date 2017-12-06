@@ -28,6 +28,9 @@ Garage Display
 
 There needs to be a space on the page where all the cars in the garage are displayed. This list should be updated whenever a car is added to the garage.
 
+Empty the input fields after a car has been added.
+Only allow cars to be added if all input fields are filled in.
+
 Styling
 ---
 
