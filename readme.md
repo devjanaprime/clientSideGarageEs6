@@ -23,13 +23,19 @@ User Input
 
 You'll need to create an interface that will allow the user to input a car's info. Then the user can click "Add" that will add the car to an array.
 
+![input](images/input.png)
+
 Garage Display
 ---
 
 There needs to be a space on the page where all the cars in the garage are displayed. This list should be updated whenever a car is added to the garage.
 
+![output](images/output.png)
+
 Empty the input fields after a car has been added.
 Only allow cars to be added if all input fields are filled in.
+
+![empties](images/empties.png)
 
 Styling
 ---
