@@ -3,16 +3,22 @@ let garage = [];
 $( document ).ready( ()=>{
     $( '#addCarButton' ).on( 'click', () =>{
             console.log( 'in addCar' );
-            // get user input & create car
-            let newCar = new Car( $( '#yearIn' ).val(), $( '#makeIn' ).val(), $( '#modelIn' ).val() );
-            // push car into garage
-            garage.push( newCar );
-            // update display
-            showCars();
-            // empty inputs
-            $( '#yearIn' ).val( '' );
-            $( '#makeIn' ).val( '' );
-            $( '#modelIn' ).val( '' );
+            //check for empties
+            if( $( '#yearIn' ).val() === '' || $( '#makeIn' ).val() === '' || $( '#modelIn' ).val() === '' ){
+                alert( 'please fill in all fields' );
+            } // end empties
+            else{
+                // get user input & create car
+                let newCar = new Car( $( '#yearIn' ).val(), $( '#makeIn' ).val(), $( '#modelIn' ).val() );
+                // push car into garage
+                garage.push( newCar );
+                // update display
+                showCars();
+                // empty inputs
+                $( '#yearIn' ).val( '' );
+                $( '#makeIn' ).val( '' );
+                $( '#modelIn' ).val( '' );
+            } // end no empties
         } // end add car
     ) // end addCarButton on click
 }); //end doc ready
